@@ -1,0 +1,24 @@
+<!DOCTYPE>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Temparature Convertor</title>
+</head>
+<body align='center'>
+    <h1>Temparature Convertor</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="unit_form"> Select unit:</label>
+        <Select id="unit_form" name="unit_form" required>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option> 
+            <option value="kelvin">Kelvin</option>
+        </select><br>
+        <label for="temp_value">Enter temparature value:</label>
+        <input type="number" id="temp_value" name="temp_value" required><br>
+        
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>
